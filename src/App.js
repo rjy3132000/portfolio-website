@@ -1,9 +1,9 @@
-import "../src/assests/css/App.css";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <div>
-      <h1>Hello world</h1>
+      <Home />
     </div>
   );
 }
