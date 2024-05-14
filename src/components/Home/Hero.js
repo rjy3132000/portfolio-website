@@ -2,7 +2,7 @@ import Navbar from "../navbar/Navbar";
 
 const Hero = () => {
   return (
-    <section>
+    <section id="Homepage">
       <Navbar />
     </section>
   );

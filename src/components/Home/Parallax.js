@@ -1,7 +1,7 @@
 import React from "react";
 
 const Parallax = () => {
-  return <section>Parallax</section>;
+  return <section id="Portfolio">Parallax</section>;
 };
 
 export default Parallax;
