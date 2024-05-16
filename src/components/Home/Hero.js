@@ -40,6 +40,21 @@ const Hero = () => {
     },
   };
 
+  const imageVariants = {
+    initial: {
+      x: 500,
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
   return (
     <section id="Homepage">
       <Navbar />
@@ -77,9 +92,18 @@ const Hero = () => {
           >
             web and app developer
           </motion.div>
-          <div className="imageContainer">
-            <img src={profileImage.image} alt="Rajesh" />
-          </div>
+          <motion.div
+            className="imageContainer"
+            variants={imageVariants}
+            initial="initial"
+            animate="animate"
+          >
+            <motion.img
+              variants={imageVariants}
+              src={profileImage.image}
+              alt="Rajesh"
+            />
+          </motion.div>
         </div>
       </div>
     </section>
