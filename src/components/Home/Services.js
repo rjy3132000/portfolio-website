@@ -64,7 +64,7 @@ const Services = () => {
             <span>line</span>
           </div>
         </motion.div>
-        <motion.div className="titleContainer">
+        <div className="titleContainer">
           <motion.h3
             variants={varaiantsLeft}
             initial={"initial"}
@@ -79,7 +79,7 @@ const Services = () => {
           >
             view more
           </motion.button>
-        </motion.div>
+        </div>
         <motion.div
           className="listContainer"
           variants={varaiantsBox}
