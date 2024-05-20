@@ -1,5 +1,5 @@
 import React from "react";
-import { animate, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import "../../assests/css/services.scss";
 
 const Services = () => {
@@ -17,6 +17,7 @@ const Services = () => {
       },
     },
   };
+
   const varaiantsLeft = {
     initial: {
       x: -500,
@@ -32,21 +33,6 @@ const Services = () => {
     },
   };
 
-  const varaiantsBox = {
-    initial: {
-      y: 500,
-      opacity: 0,
-    },
-    animate: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 1,
-        straggerChildren: 0.1,
-      },
-    },
-  };
-
   return (
     <section id="Services" className="Services">
       <div className="wrapper">
@@ -54,7 +40,7 @@ const Services = () => {
           className="textContainer"
           variants={varaiantsRight}
           initial={"initial"}
-          animate={"animate"}
+          whileInView={"animate"}
         >
           <h3>
             <span>I focus on learn new techchnology, build skills, </span>
@@ -68,23 +54,23 @@ const Services = () => {
           <motion.h3
             variants={varaiantsLeft}
             initial={"initial"}
-            animate={"animate"}
+            whileInView={"animate"}
           >
             recent projects
           </motion.h3>
           <motion.button
-            variants={varaiantsRight}
+            variants={varaiantsLeft}
             initial={"initial"}
-            animate={"animate"}
+            whileInView={"animate"}
           >
             view more
           </motion.button>
         </div>
         <motion.div
           className="listContainer"
-          variants={varaiantsBox}
+          variants={varaiantsRight}
           initial={"initial"}
-          animate={"animate"}
+          whileInView={"animate"}
         >
           <ul className="box">
             <li>
