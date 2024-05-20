@@ -1,12 +1,61 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { animate, motion } from "framer-motion";
 import "../../assests/css/services.scss";
 
 const Services = () => {
+  const varaiantsRight = {
+    initial: {
+      x: 500,
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+        straggerChildren: 0.1,
+      },
+    },
+  };
+  const varaiantsLeft = {
+    initial: {
+      x: -500,
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+        straggerChildren: 0.1,
+      },
+    },
+  };
+
+  const varaiantsBox = {
+    initial: {
+      y: 500,
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+        straggerChildren: 0.1,
+      },
+    },
+  };
+
   return (
     <section id="Services" className="Services">
-      <motion.div className="wrapper">
-        <motion.div className="textContainer">
+      <div className="wrapper">
+        <motion.div
+          className="textContainer"
+          variants={varaiantsRight}
+          initial={"initial"}
+          animate={"animate"}
+        >
           <h3>
             <span>I focus on learn new techchnology, build skills, </span>
             <span>and move ahead.</span>
@@ -16,10 +65,27 @@ const Services = () => {
           </div>
         </motion.div>
         <motion.div className="titleContainer">
-          <h3>recent projects</h3>
-          <button>view more</button>
+          <motion.h3
+            variants={varaiantsLeft}
+            initial={"initial"}
+            animate={"animate"}
+          >
+            recent projects
+          </motion.h3>
+          <motion.button
+            variants={varaiantsRight}
+            initial={"initial"}
+            animate={"animate"}
+          >
+            view more
+          </motion.button>
         </motion.div>
-        <motion.div className="listContainer">
+        <motion.div
+          className="listContainer"
+          variants={varaiantsBox}
+          initial={"initial"}
+          animate={"animate"}
+        >
           <ul className="box">
             <li>
               <h4>project name</h4>
@@ -69,7 +135,7 @@ const Services = () => {
             </li>
           </ul>
         </motion.div>
-      </motion.div>
+      </div>
     </section>
   );
 };
