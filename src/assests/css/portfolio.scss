@@ -1,0 +1,77 @@
+.portfolio {
+  .wrapper {
+    position: relative;
+
+    .progress {
+      position: sticky;
+      top: 0;
+      left: 0;
+      padding-top: 50px;
+
+      h1 {
+        text-align: center;
+        color: #ffa500;
+        font-size: 36px;
+        text-transform: capitalize;
+      }
+
+      .progressBar {
+        height: 10px;
+        background: #fff;
+      }
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+
+      .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+
+        .imageContainer {
+            flex: 1;
+                height: 50%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .textContainer {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            h2 {
+                font-style: 72px;
+            }
+
+            p {
+                color: #808080;
+                font-size: 20px;
+            }
+
+            button {
+                background-color: #ffa500;
+                border: none;
+                border-radius: 10px;
+                padding: 10px;
+                width: 200px;
+                cursor: pointer;
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+        }
+      }
+    }
+  }
+}
