@@ -4,8 +4,8 @@ import Parallax from "../components/Home/Parallax";
 import Services from "../components/Home/Services";
 import Parallax1 from "../components/Home/Parallax1";
 import Portifolio1 from "../components/Home/Portifolio1";
-import Portifolio2 from "../components/Home/Portifolio2";
-import Portifolio3 from "../components/Home/Portifolio3";
+// import Portifolio2 from "../components/Home/Portifolio2";
+// import Portifolio3 from "../components/Home/Portifolio3";
 import Contact from "../components/Home/Contact";
 import "../assests/css/app.scss";
 
@@ -17,8 +17,8 @@ const Home = () => {
       <Services />
       <Parallax1 />
       <Portifolio1 />
-      <Portifolio2 />
-      <Portifolio3 />
+      {/* <Portifolio2 />
+      <Portifolio3 /> */}
       <Contact />
     </div>
   );
