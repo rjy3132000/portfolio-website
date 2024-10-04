@@ -26,6 +26,17 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    const form = formRef.current;
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const message = form.message.value.trim();
+
+    if (!name || !email || !message) {
+      setError(true);
+      setSuccess(false);
+      return;
+    }
+
     emailjs
       .sendForm(
         process.env.REACT_APP_YOUR_SERVICE_ID,
@@ -38,9 +49,12 @@ const Contact = () => {
       .then(
         () => {
           setSuccess(true);
+          setError(false);
+          formRef.current.reset();
         },
         (error) => {
           setError(true);
+          setSuccess(false);
         }
       );
   };
@@ -112,10 +126,15 @@ const Contact = () => {
               >
                 <input type="text" placeholder="Name" required name="name" />
                 <input type="email" placeholder="Email" required name="email" />
-                <textarea rows={8} placeholder="Message" name="message" />
+                <textarea
+                  rows={8}
+                  placeholder="Message"
+                  name="message"
+                  required
+                />
                 <button type="submit">send</button>
-                {error && "Error"}
-                {success && "Success"}
+                {error && "Error: Please fill in all fields correctly."}
+                {success && "Message sent successfully!"}
               </motion.form>
             </div>
           </motion.div>
